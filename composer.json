@@ -1,0 +1,18 @@
+{
+  "name": "devhammed/simple-orm",
+  "description": "Experimenting with Simple ORM",
+  "type": "library",
+  "license": "MIT",
+  "autoload": {
+    "psr-4": {
+      "Devhammed\\SimpleOrm\\": "src/"
+    }
+  },
+  "authors": [
+    {
+      "name": "Hammed Oyedele",
+      "email": "itz.harmid@gmail.com"
+    }
+  ],
+  "require": {}
+}

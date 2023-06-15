@@ -1,0 +1,32 @@
+{
+  "name": "devhammed/simple-orm-example",
+  "description": "Example usage of Simple ORM",
+  "type": "project",
+  "license": "MIT",
+  "autoload": {
+    "psr-4": {
+      "Devhammed\\SimpleOrmExample\\": "src/"
+    }
+  },
+  "authors": [
+    {
+      "name": "Hammed Oyedele",
+      "email": "itz.harmid@gmail.com"
+    }
+  ],
+  "require": {
+    "devhammed/simple-orm": "*"
+  },
+  "scripts": {
+    "start": [
+      "php public/index.php"
+    ]
+  },
+  "minimum-stability": "dev",
+  "repositories": [
+    {
+      "type": "path",
+      "url": "../"
+    }
+  ]
+}

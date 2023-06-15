@@ -1,0 +1,47 @@
+{
+    "_readme": [
+        "This file locks the dependencies of your project to a known state",
+        "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
+        "This file is @generated automatically"
+    ],
+    "content-hash": "ca86b096f0466499d8220c06e8409ac8",
+    "packages": [
+        {
+            "name": "devhammed/simple-orm",
+            "version": "dev-main",
+            "dist": {
+                "type": "path",
+                "url": "..",
+                "reference": "bf3d1e6129cb7f32e1379118d7415e6193cdad15"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Devhammed\\SimpleOrm\\": "src/"
+                }
+            },
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Hammed Oyedele",
+                    "email": "itz.harmid@gmail.com"
+                }
+            ],
+            "description": "Experimenting with Simple ORM",
+            "transport-options": {
+                "relative": true
+            }
+        }
+    ],
+    "packages-dev": [],
+    "aliases": [],
+    "minimum-stability": "dev",
+    "stability-flags": [],
+    "prefer-stable": false,
+    "prefer-lowest": false,
+    "platform": [],
+    "platform-dev": [],
+    "plugin-api-version": "2.3.0"
+}
