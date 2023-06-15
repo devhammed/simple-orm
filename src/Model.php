@@ -25,7 +25,7 @@ abstract class Model
         self::$connections[$name] = $config;
     }
 
-    public function getQuery(): PDO
+    public function getPDO(): PDO
     {
         if (isset(self::$cachedConnections[static::$connection])) {
             return self::$cachedConnections[static::$connection];
@@ -60,14 +60,14 @@ abstract class Model
 
     public static function findOne(
         string|int $id,
-        array $columns = ['*']
+        array $columns = ['*'],
     ): ?static {
         try {
             $instance = static::getInstance();
 
-            $query = $instance->getQuery();
+            $pdo = $instance->getPDO();
 
-            $statement = $query->prepare(sprintf(
+            $statement = $pdo->prepare(sprintf(
                 'SELECT %s FROM %s WHERE id = :id LIMIT 1;',
                 implode(', ', $columns),
                 $instance->getTable(),
@@ -95,9 +95,9 @@ abstract class Model
         try {
             $instance = static::getInstance();
 
-            $query = $instance->getQuery();
+            $pdo = $instance->getPDO();
 
-            $statement = $query->prepare(sprintf(
+            $statement = $pdo->prepare(sprintf(
                 'SELECT %s FROM %s;',
                 implode(', ', $columns),
                 $instance->getTable()
